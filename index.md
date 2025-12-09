@@ -1,6 +1,6 @@
 # **Exploring Factors that Influence Student Exam Scores**
 ### Fall 2025 Data Science Project
-###By: Leah Brennan, Priyanshi Patel, Reuben Puthumana, Maya Cleveland
+### By: Leah Brennan, Priyanshi Patel, Reuben Puthumana, Maya Cleveland
 
 # **Contributions**
 
@@ -26,13 +26,13 @@ Through hypothesis tests and statistical analysis of our study habits dataset, w
 
 **Dataset Citation:**  
 Jayanta Nath. (n.d.). *Student Habits vs Academic Performance*. Kaggle.  
-https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance
+[https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance](https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance)
 
 ## Dataset Description
 
 The dataset comes from Kaggle and contains information about approximately 1,000 students and their daily habits, lifestyle factors, and academic performance. Each row represents one student, with 16 columns covering demographic details (age, gender), behavioral variables (study hours per day, social media use, Netflix hours, sleep hours, exercise frequency), and school-related factors (attendance percentage, part-time job status, mental health rating, extracurricular participation). The dataset also includes ratings such as diet quality and internet quality, along with parental education level. The primary outcome variable is `exam_score`, which measures each student’s academic performance. Overall, the dataset provides a broad view of habits and conditions that may relate to student success.
 
-# Imports
+## Imports
 
 
 ```python
@@ -1739,7 +1739,7 @@ We look at the newly cleaned dataset to understand how different variables relat
 
 To help determine which tests to use for specific data: https://www.eimt.edu.eu/hypothesis-testing-in-statistics-types-steps-examples
 
-# Imports
+## Imports
 
 
 ```python
@@ -2220,11 +2220,11 @@ From these three statistical tests, we have gathered the only statistically sign
 
 By using machine learning models, we are able to create a predictive model for the data based on the factors of our choice. This will help us predict student exam scores based off of the trends we have explored in our exploratory data analysis and summary statistics. For our predictive model, we will be using Random Forest. We chose random forest because we are feeding in multiple features that may contribute to one numerical outcome. Compared to KNN, the Random Forest Model is better at handling non-linear relationships and is less sensitive to outliers. Lastly, Random Forest is good at capturing relationships between a number of factors.
 
-For more information on choosing a ML model: https://www.ibm.com/think/topics/model-selection
+For more information on choosing a ML model: [https://www.ibm.com/think/topics/model-selection](https://www.ibm.com/think/topics/model-selection)
 
 By analyzing alot of features at once, it can make it harder to create a good predictive model. Therefore, we drop some features that we have not explored to have a relationship with student exam score. In our statistical analysis, we determined that there is a statistically signficant relationship between the study hours vs exam score. However, we determined there is not a statistically significant relationship between parental education level and exam score. Additonally, there was not a signifcant relationship between gender and exam scores. Therefore, we will be cutting parental education level and gender as a factors to reduce noise. We will be using study hours as a factor for our model. In general, we will be keepig the numerical factors while cutting the categorical factors from our dataset. From the dataset, we will be keeping the features for study hours, social media hours, netflix hours, attendance percentage and sleep hours.
 
-# Imports
+## Imports
 
 
 
@@ -2235,7 +2235,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 ```
 
-# Dataset Preparation
+## Dataset Preparation
 
 We create a new dataset, dropping any columns that are not numerical so that we may narrow down the data we use to make accurate predictions on exam scores. We use this new dataset to assign X as a Dataframe made of all input features, excluding exam score, since this is what we will be predicting. Then y becomes a Series representing the output we want the function to learn from, which is the exam score. This preparation allows us to clearly separate what the model knows to predict and what will be used for predicting.
 
@@ -2245,7 +2245,7 @@ X= df.drop(columns=['score_category', 'age', 'gender', 'part_time_job', 'diet_qu
 Y= df['exam_score']
 ```
 
-# Train/Test Split
+## Train/Test Split
 We will now split our dataset into a training and testing data set. In order to do this, we use test_train_split from Scikit-learn. We will be splitting the training data with a ratio of 80/20 (test_size = 0.2) and we will feed a random state of 42 to make sure our results are reproducible.
 
 
@@ -2262,7 +2262,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-# Random Forest Model
+## Random Forest Model
 We now create our Random Forest model and fit our training data to that model. Then we will be able to use this model to predict outcomes for our testing data. We will be generating 60 trees for our data so that it does not take too much processing. We acknowledge that this is a relatively small number of trees and may cause the model to be unstable and affect predictive performance.
 
 
@@ -2701,7 +2701,7 @@ We now test our model using our testing data
 Y_pred = model.predict(X_test)
 ```
 
-# Evaluating the Model
+## Evaluating the Model
 
 In order to evaluate our model, we will be calculating the mean squared error and the r squared value.
 
