@@ -20,15 +20,17 @@ Our analysis is driven by three investigative points. The first relationship we 
 
 Through hypothesis tests and statistical analysis of our study habits dataset, we hope to identify relationships between environmental factors, study habits, and academic performance.
 
-# **Data Curation**
+# Data Curation
 
-Dataset Chosen: Student Habits vs. Academic Performance (Kaggle)
+**Dataset Chosen:** Student Habits vs. Academic Performance (Kaggle)
 
-Dataset Citation: Jayanta Nath. (n.d.). Student Habits vs Academic Performance. Kaggle. https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance
+**Dataset Citation:**  
+Jayanta Nath. (n.d.). *Student Habits vs Academic Performance*. Kaggle.  
+https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance
 
-#Dataset Description
+## Dataset Description
 
-The dataset comes from Kaggle and contains information about 1,000 individual students and their daily habits, lifestyle factors, and academic performance. Each row represents one student, with the 16 columns covering demographic details (age, gender), behaivor-based variables (study hours per day, social media use, Netflix hours, sleep hours, exercise frequency), and school-related factors (attendance percentage, part-time job status, mental health rating, extracurricular participation). It also includes ratings like diet quality and internet quality, along with parental education level. The main outcome variable is exam_score, which measures each student's academic performance. Overall, the dataset provides a broad view of habits and conditions that may relate to student success
+The dataset comes from Kaggle and contains information about approximately 1,000 students and their daily habits, lifestyle factors, and academic performance. Each row represents one student, with 16 columns covering demographic details (age, gender), behavioral variables (study hours per day, social media use, Netflix hours, sleep hours, exercise frequency), and school-related factors (attendance percentage, part-time job status, mental health rating, extracurricular participation). The dataset also includes ratings such as diet quality and internet quality, along with parental education level. The primary outcome variable is `exam_score`, which measures each student’s academic performance. Overall, the dataset provides a broad view of habits and conditions that may relate to student success.
 
 #Imports
 
