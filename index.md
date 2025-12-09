@@ -2885,7 +2885,7 @@ The aim of this project was to determine what factors played the largest role in
 
 **Future Steps**
 
-Our Random Forest model had a *$R^2$* score of 0.68, which means it covered about 68% of the variability in data. While this shows our model was effective, it also shows that there is room for improvement:
+Our Random Forest model had a R squared score of 0.68, which means it covered about 68% of the variability in data. While this shows our model was effective, it also shows that there is room for improvement:
 
 
 
