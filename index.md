@@ -2723,7 +2723,7 @@ The mean squared value tells us that how much the model's predictions differ fro
 
 The evaluation results help show how the Random Forest model is performing. Random Forest works by averaging the results of many decision trees, which allows it to learn patterns between multiple features at the same time. The model is able to follow the general trend in exam scores, with predicted values increasing as actual scores increase. This explains why the R squared value is relatively high. However, Random Forest models normally smooth out very high or very low values. This can lead to prediction errors at the extreme ends of exam scores, which explains why the MSE is higher. Overall, this shows that the Random Forest model works well for predicting exam scores, but it is not perfect.
 
-# Feature Importance
+## Feature Importance
 
 We can now generate feature importance to tell us which features are weighted the most by the model. We can then use this information to restructure our dataset in the future to reduce noise and produce a stronger model.
 
@@ -2747,7 +2747,7 @@ From the feature importance analysis, we can conclude that study hours have the 
 
 # **Visualization**
 
-# Scatter Plot
+## Scatter Plot
 
 
 ```python
@@ -2774,7 +2774,7 @@ plt.show()
 
 To complement the mean squared error and R-squared value, we also visualize the model’s performance by comparing actual and predicted exam scores. As stated above, the model’s predictions show moderate deviation from the true values (MSE: 82), which is reflected in the plot by the noticeable but not extreme spread of points near the prediction line. We calculated that the model captures 68% of the variability in exam performance, which aligns with the strong positive correlation seen in the plot.
 
-# Bar Graph
+## Bar Graph
 
 
 ```python
@@ -2795,7 +2795,7 @@ plt.show()
 
 We now take a closer look at the feature importance. While the table provides exact feature importance values, the bar chart makes it much clearer that study hours per day is the most influential factor in predicting exam scores. The visualization highlights the large gap between study hours and the other features. The remaining variables play a much smaller and relatively similar role in the model.
 
-# Heat Map
+## Heat Map
 
 
 ```python
@@ -2817,7 +2817,7 @@ plt.show()
 
 We use a heat map to visualize the relationship between all the factors studied. A heat map is used to find relationships between all numerical features and show us how different factors affect each other. From the results, we can see that there is a high positive correlation between the number of study hours and the exam score. Additionally, we can see that social media hours and netflix hours have a slight negative correlation with the exam scores. Lastly, we can see that sleep hours and attendance percentage have a slight positive correlation with exam scores.
 
-# Residual Plot
+## Residual Plot
 
 
 ```python
@@ -2844,7 +2844,7 @@ plt.title("Residuals vs Predicated Exam Scores")
 
 We included a residual plot to evaluate how well the Random Forest model predicts exam scores and to check for any systematic patterns in its errors. A good regression model should produce residuals that are randomly scattered around zero without forming a clear shape or trend. In this plot, the points are spread fairly evenly above and below the zero line across the range of predicted scores, which suggests that the model does not consistently overpredict or underpredict for any particular score range. While there is some natural variation, the randomness of the residuals indicates that the model captures the main structure of the data and that its remaining errors are mostly random rather than caused by a missing pattern or bias.
 
-# Histogram
+## Histogram
 
 
 ```python
