@@ -16,10 +16,9 @@
 
 Understanding the factors that influence student academic performance is a widely researched topic in social sciences as it has important applications for parents, teachers, students, and policymakers. In a time where there is a large stress on academic success, it is valuable to identify which study habits and demographic factors correlate to higher exam scores, and which factors are unimportant. This project investigates how variables such as parental education level, number of study hours per day, and gender relate to exam performance.
 
-Our analysis is driven by three investigative points. The first relationship we explore is between a students exam score and their parental education level. The second relationship is between the number of hours a student studies and thier exam score. The last is between the gender and the number of study hours. Exploring these relationships is important to help shape educational policies, resource allocations for schools, and expectations placed on students.
+Our analysis is driven by the investigation of how numerical factors such as the students study hours and the social media hours affect the students overall exam score. Exploring these relationships is important to help shape educational policies, resource allocations for schools, and expectations placed on students. It will also help inform students on productive habits that will assist them in optimizing their grades on exams.
 
-Through hypothesis tests and statistical analysis of our study habits dataset, we hope to identify relationships between environmental factors, study habits, and academic performance.
-
+Through hypothesis tests and statistical analysis of our study habits dataset, we hope to identify relationships between environmental factors, student habits, and academic performance.
 # Data Curation
 
 **Dataset Chosen:** Student Habits vs. Academic Performance (Kaggle)
@@ -2125,7 +2124,7 @@ plt.title("Parent Education Level vs Exam Score")
 Across parental education levels, the number of students earning a "High" exam score did not seem strong enough to assume a relation, with "High School" actually having the largest number of students and "Master" having the lowest. The only pattern worth noting is "Low" scores having the largest number of students for "High School" and the smallest number for "Master" but this is not enough to support the overall hypothesis. As such, we shouldn’t infer a correlation from this pattern alone, especially since students with parents holding master’s degrees do not show the highest perfect-score rate. Overall, the plot suggests only minor differences across groups and does not provide clear evidence of a meaningful correlation between parental education and earning a high exam score.
 
 ### Conclusion
-Because our significance level is 0.05 and the p-value is 0.40411015217143925, we fail to reject the null hypothesis because the p-value is much greater than the significance level. Since we failed to prove the null hypothesis wrong, we can assume that there is no statistically significant evidence to prove the association between the parental education level and their child's exam score.
+Because our significance level is 0.05 and the p-value is 0.267, we fail to reject the null hypothesis because the p-value is much greater than the significance level. Since we failed to prove the null hypothesis wrong, we can assume that there is no statistically significant evidence to prove the association between the parental education level and their child's exam score.
 
 ## 2. Pearson Correlation and Hypothesis Testing
 
