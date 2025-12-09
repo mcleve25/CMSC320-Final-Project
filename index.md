@@ -32,20 +32,20 @@ https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-perform
 
 The dataset comes from Kaggle and contains information about approximately 1,000 students and their daily habits, lifestyle factors, and academic performance. Each row represents one student, with 16 columns covering demographic details (age, gender), behavioral variables (study hours per day, social media use, Netflix hours, sleep hours, exercise frequency), and school-related factors (attendance percentage, part-time job status, mental health rating, extracurricular participation). The dataset also includes ratings such as diet quality and internet quality, along with parental education level. The primary outcome variable is `exam_score`, which measures each student’s academic performance. Overall, the dataset provides a broad view of habits and conditions that may relate to student success.
 
-#Imports
+# Imports
 
 
 ```python
 import pandas as pd
 ```
 
-#Transform the Data
+# Transform the Data
 First, we load the dataset containing student habits and exam performance using the read_csv function from pandas. The dataset is displayed to show us the data structure, view the columns, and verify that the data loaded correctly before we proceed with preprocessing.
 
 
 
 
-You can get more information about the Pandas Library at: https://pandas.pydata.org/docs/reference/frame.html
+You can get more information about the Pandas Library at: [https://pandas.pydata.org/docs/reference/frame.html](https://pandas.pydata.org/docs/reference/frame.html)
 
 
 ```python
@@ -573,9 +573,9 @@ display(df)
 
 
 
-#Preprocessing
+# Preprocessing
 
-##Parsing
+## Parsing
 
 To begin working with the dataset, we first inspected its structure and data types using df.info(). This summary shows each column's type, along with the number of non-null entries. Looking at this output helped us understand how the data was loaded by default and which columns needed to be converted into more appropriate types before analysis.
 
@@ -1174,7 +1174,7 @@ display(df)
 
 
 
-##Organizing
+## Organizing
 
 After parsing, the next step was to organize the dataset into a structure that better supports our statistical analysis. First, we set the "student_id" column as the index. This makes each row easier to reference by a unique identifier and removes the need to treat "student_id" as a regular feature during analysis.
 
@@ -1739,7 +1739,7 @@ We look at the newly cleaned dataset to understand how different variables relat
 
 To help determine which tests to use for specific data: https://www.eimt.edu.eu/hypothesis-testing-in-statistics-types-steps-examples
 
-#Imports
+# Imports
 
 
 ```python
@@ -2224,7 +2224,7 @@ For more information on choosing a ML model: https://www.ibm.com/think/topics/mo
 
 By analyzing alot of features at once, it can make it harder to create a good predictive model. Therefore, we drop some features that we have not explored to have a relationship with student exam score. In our statistical analysis, we determined that there is a statistically signficant relationship between the study hours vs exam score. However, we determined there is not a statistically significant relationship between parental education level and exam score. Additonally, there was not a signifcant relationship between gender and exam scores. Therefore, we will be cutting parental education level and gender as a factors to reduce noise. We will be using study hours as a factor for our model. In general, we will be keepig the numerical factors while cutting the categorical factors from our dataset. From the dataset, we will be keeping the features for study hours, social media hours, netflix hours, attendance percentage and sleep hours.
 
-#Imports
+# Imports
 
 
 
@@ -2245,7 +2245,7 @@ X= df.drop(columns=['score_category', 'age', 'gender', 'part_time_job', 'diet_qu
 Y= df['exam_score']
 ```
 
-#Train/Test Split
+# Train/Test Split
 We will now split our dataset into a training and testing data set. In order to do this, we use test_train_split from Scikit-learn. We will be splitting the training data with a ratio of 80/20 (test_size = 0.2) and we will feed a random state of 42 to make sure our results are reproducible.
 
 
@@ -2701,7 +2701,7 @@ We now test our model using our testing data
 Y_pred = model.predict(X_test)
 ```
 
-#Evaluating the Model
+# Evaluating the Model
 
 In order to evaluate our model, we will be calculating the mean squared error and the r squared value.
 
@@ -2724,7 +2724,7 @@ The mean squared value tells us that how much the model's predictions differ fro
 
 The evaluation results help show how the Random Forest model is performing. Random Forest works by averaging the results of many decision trees, which allows it to learn patterns between multiple features at the same time. The model is able to follow the general trend in exam scores, with predicted values increasing as actual scores increase. This explains why the R squared value is relatively high. However, Random Forest models normally smooth out very high or very low values. This can lead to prediction errors at the extreme ends of exam scores, which explains why the MSE is higher. Overall, this shows that the Random Forest model works well for predicting exam scores, but it is not perfect.
 
-#Feature Importance
+# Feature Importance
 
 We can now generate feature importance to tell us which features are weighted the most by the model. We can then use this information to restructure our dataset in the future to reduce noise and produce a stronger model.
 
@@ -2748,7 +2748,7 @@ From the feature importance analysis, we can conclude that study hours have the 
 
 # **Visualization**
 
-#Scatter Plot
+# Scatter Plot
 
 
 ```python
@@ -2775,7 +2775,7 @@ plt.show()
 
 To complement the mean squared error and R-squared value, we also visualize the model’s performance by comparing actual and predicted exam scores. As stated above, the model’s predictions show moderate deviation from the true values (MSE: 82), which is reflected in the plot by the noticeable but not extreme spread of points near the prediction line. We calculated that the model captures 68% of the variability in exam performance, which aligns with the strong positive correlation seen in the plot.
 
-#Bar Graph
+# Bar Graph
 
 
 ```python
@@ -2818,7 +2818,7 @@ plt.show()
 
 We use a heat map to visualize the relationship between all the factors studied. A heat map is used to find relationships between all numerical features and show us how different factors affect each other. From the results, we can see that there is a high positive correlation between the number of study hours and the exam score. Additionally, we can see that social media hours and netflix hours have a slight negative correlation with the exam scores. Lastly, we can see that sleep hours and attendance percentage have a slight positive correlation with exam scores.
 
-#Residual Plot
+# Residual Plot
 
 
 ```python
@@ -2845,7 +2845,7 @@ plt.title("Residuals vs Predicated Exam Scores")
 
 We included a residual plot to evaluate how well the Random Forest model predicts exam scores and to check for any systematic patterns in its errors. A good regression model should produce residuals that are randomly scattered around zero without forming a clear shape or trend. In this plot, the points are spread fairly evenly above and below the zero line across the range of predicted scores, which suggests that the model does not consistently overpredict or underpredict for any particular score range. While there is some natural variation, the randomness of the residuals indicates that the model captures the main structure of the data and that its remaining errors are mostly random rather than caused by a missing pattern or bias.
 
-#Histogram
+# Histogram
 
 
 ```python
